@@ -3,7 +3,7 @@ select
     user_id as customer_id,
     order_date,
     status,
-    case
+        case
         when status in ('placed', 'shipped', 'completed')
             then 'Y'
         when status in ('returned', 'return_pending')
